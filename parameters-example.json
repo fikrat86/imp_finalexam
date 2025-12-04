@@ -1,0 +1,42 @@
+[
+  {
+    "ParameterKey": "EnvironmentName",
+    "ParameterValue": "Muhibullah"
+  },
+  {
+    "ParameterKey": "GitHubRepo",
+    "ParameterValue": "fikrat86/imp_finalexam"
+  },
+  {
+    "ParameterKey": "GitHubBranch",
+    "ParameterValue": "main"
+  },
+  {
+    "ParameterKey": "GitHubToken",
+    "ParameterValue": "your-github-personal-access-token"
+  },
+  {
+    "ParameterKey": "ContainerPort",
+    "ParameterValue": "80"
+  },
+  {
+    "ParameterKey": "DesiredCount",
+    "ParameterValue": "2"
+  },
+  {
+    "ParameterKey": "MinContainers",
+    "ParameterValue": "2"
+  },
+  {
+    "ParameterKey": "MaxContainers",
+    "ParameterValue": "10"
+  },
+  {
+    "ParameterKey": "AutoScalingTargetCPU",
+    "ParameterValue": "70"
+  },
+  {
+    "ParameterKey": "NotificationEmail",
+    "ParameterValue": "your-email@example.com"
+  }
+]

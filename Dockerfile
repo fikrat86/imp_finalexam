@@ -1,8 +1,8 @@
 # Sample Dockerfile for Wild Rydes Application
-# This is a simple example - replace with your actual application
+# Using Amazon ECR Public registry to avoid Docker Hub rate limits
 
-# Use official nginx image as base
-FROM nginx:alpine
+# Use nginx from Amazon ECR Public Gallery
+FROM public.ecr.aws/nginx/nginx:alpine
 
 # Copy custom HTML content
 COPY index.html /usr/share/nginx/html/

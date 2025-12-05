@@ -711,12 +711,7 @@ Resources:
                 Resource: !GetAtt CodeBuildProject.Arn
               - Effect: Allow
                 Action:
-                  - ecs:DescribeServices
-                  - ecs:DescribeTaskDefinition
-                  - ecs:DescribeTasks
-                  - ecs:ListTasks
-                  - ecs:RegisterTaskDefinition
-                  - ecs:UpdateService
+                  - ecs:*
                 Resource: '*'
               - Effect: Allow
                 Action:
@@ -750,7 +745,7 @@ Resources:
                 Repo: !Select [1, !Split ['/', !Ref GitHubRepo]]
                 Branch: !Ref GitHubBranch
                 OAuthToken: !Ref GitHubToken
-                PollForSourceChanges: false
+                PollForSourceChanges: true
               OutputArtifacts:
                 - Name: SourceOutput
         - Name: Build

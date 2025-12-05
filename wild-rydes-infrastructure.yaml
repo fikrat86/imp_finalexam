@@ -60,7 +60,7 @@ Parameters:
   NotificationEmail:
     Type: String
     Description: Email address for pipeline notifications
-    Default: admin@wildrydes.com
+    Default: fikrat86@gmail.com
 
 Resources:
   # ===========================
@@ -359,7 +359,7 @@ Resources:
   ECRRepository:
     Type: AWS::ECR::Repository
     Properties:
-      RepositoryName: !Sub ${EnvironmentName}-app
+      RepositoryName: muhibullah-wild-rydes-app
       ImageScanningConfiguration:
         ScanOnPush: true
       LifecyclePolicy:
@@ -545,7 +545,7 @@ Resources:
   PipelineNotificationTopic:
     Type: AWS::SNS::Topic
     Properties:
-      TopicName: !Sub ${EnvironmentName}-Pipeline-Notifications
+      TopicName: !Sub muhibullah-pipeline-notifications-${AWS::StackName}
       DisplayName: Wild Rydes Pipeline Notifications
       Subscription:
         - Endpoint: !Ref NotificationEmail
@@ -670,7 +670,7 @@ Resources:
   ArtifactBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Sub ${EnvironmentName}-pipeline-artifacts-${AWS::AccountId}
+      BucketName: !Sub muhibullah-pipeline-artifacts-${AWS::AccountId}
       VersioningConfiguration:
         Status: Enabled
       BucketEncryption:
